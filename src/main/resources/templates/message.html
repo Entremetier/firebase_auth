@@ -12,17 +12,22 @@
 
     <div class="container">
 
-        <button class="btn btn-primary mb-5" type="submit" name="submit-button" id="logOutBttn">Log out</button>
-
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+                <h3 class="col-12 text-center mb-5 mt-5 offset-5">Nachrichten abrufen</h3>
+                <input id="email" type="email" class="col-6 mb-3 offset-8" placeholder="E-Mail">
+                <input id="password" type="password" class="col-6 mb-3 offset-8" placeholder="Passwort">
+                <button id="loginBttn" name="loginBttn" class="btn btn-primary col-6 offset-8 mb-5 hide" type="submit">Log In</button>
+                <button id="logOutBttn" name="logOutBttn" class="btn btn-primary col-6 offset-8 mb-5 hide" type="submit">Log Out</button>
+            </div>
+        </div>
 
         <form id="messageForm">
             <div class="row">
-                <h4 class="col-6 text-center mb-3">Aktuelle Keys</h4>
-                <ol id="keylist" class="col-6 text-center mb-3">
-                </ol>
+                <h4 class="col-6 text-center mb-3">Aktueller Key</h4>
             </div>
 
-            <div class="col-6">
+            <div class="col-12 col-sm-12 col-md-6">
                 <label for="id">ID</label>
                 <input class="form-control mb-3" type="text" name="id" id="id">
             </div>
