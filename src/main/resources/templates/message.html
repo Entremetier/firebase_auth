@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <link href="/css/styles.css" rel="stylesheet" media="screen"/>
@@ -11,6 +11,9 @@
 <section id="contact" class="dark">
 
     <div class="container">
+
+        <button class="btn btn-primary mb-5" type="submit" name="submit-button" id="logOutBttn">Log out</button>
+
 
         <form id="messageForm">
             <div class="row">
@@ -26,7 +29,6 @@
 
             <div class="text-center col-6">
                 <button class="btn btn-primary mb-5" type="submit" name="submit-button">Nachricht anzeigen</button>
-                <button class="btn btn-primary mb-5" type="submit" name="submit-button">Log out</button>
             </div>
         </form>
 
@@ -52,6 +54,7 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
 
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script>

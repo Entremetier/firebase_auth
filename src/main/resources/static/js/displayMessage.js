@@ -10,6 +10,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+const auth = firebase.auth();
 
 //Reference to collection "messages"
 let messagesRef = firebase.database().ref('messages');
@@ -35,10 +36,10 @@ function submitForm(e) {
     messagesRef.on('value', gotData, errData);
 
     function gotData(data) {
-        // console.log(data.val());
         let contact = data.val();
+         console.log("data.val(): " + contact);
         let keys = Object.keys(contact);
-        // console.log(keys);
+         console.log("Was ist das? " + keys);
         for (let i = 0; i < keys.length; i++) {
             key = keys[i];
             if (key === id) {
@@ -65,3 +66,12 @@ function submitForm(e) {
         return document.getElementById(id).value;
     }
 }
+
+const logOutBttn = document.getElementById("#logOutBttn");
+
+logOutBttn.addEventListener('click', event => {
+    event.preventDefault();
+    auth.signOut().then(() => {
+        console.log("User logged out!");
+    });
+});
